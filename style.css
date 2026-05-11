@@ -1,0 +1,411 @@
+/* css/style.css */
+
+/* FUNDO DA PÁGINA */
+.contato-bg{
+  height: 100vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background: url('../img/banner.jpg') center/cover no-repeat;
+  position: relative;
+}
+
+.contato-bg::before{
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.75);
+}
+
+/* CARD CONTATO */
+.contato-card{
+  position: relative;
+  z-index: 2;
+
+  width: 420px;
+
+  background: rgba(20,20,20,0.85);
+  backdrop-filter: blur(10px);
+
+  padding: 40px;
+  border-radius: 12px;
+
+  box-shadow: 0 10px 30px rgba(0,0,0,0.6);
+  text-align: center;
+}
+
+.contato-card h1{
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.contato-card p{
+  color: #aaa;
+  margin-bottom: 25px;
+}
+
+/* INPUTS */
+.input-box{
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.input-box input,
+.input-box textarea{
+  width: 100%;
+  padding: 12px;
+
+  background: transparent;
+  border: 1px solid #444;
+  border-radius: 6px;
+
+  color: white;
+  outline: none;
+
+  transition: 0.3s;
+}
+
+.input-box textarea{
+  resize: none;
+  height: 100px;
+}
+
+/* LABEL FLUTUANTE */
+.input-box label{
+  position: absolute;
+  left: 12px;
+  top: 12px;
+
+  color: #999;
+  transition: 0.3s;
+  pointer-events: none;
+}
+
+/* EFEITO FOCO */
+.input-box input:focus,
+.input-box textarea:focus{
+  border-color: #e50914;
+}
+
+.input-box input:focus + label,
+.input-box textarea:focus + label,
+.input-box input:valid + label,
+.input-box textarea:valid + label{
+  top: -10px;
+  font-size: 12px;
+  color: #e50914;
+  background: #141414;
+  padding: 0 5px;
+}
+
+/* BOTÃO */
+.contato-card button{
+  width: 100%;
+  padding: 12px;
+
+  background: #e50914;
+  color: white;
+
+  border: none;
+  border-radius: 6px;
+
+  font-weight: bold;
+  cursor: pointer;
+
+  transition: 0.3s;
+}
+
+.contato-card button:hover{
+  background: #b00610;
+  transform: scale(1.03);
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  background-color: #141414;
+  color: white;
+  font-family: 'Montserrat', sans-serif;
+}
+
+/* HEADER */
+
+.header{
+  width: 100%;
+  padding: 20px 50px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  position: fixed;
+  top: 0;
+
+  z-index: 1000;
+
+  background: linear-gradient(to bottom, rgba(0,0,0,0.8), transparent);
+}
+
+.logo{
+  color: #e50914;
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.menu{
+  display: flex;
+  gap: 20px;
+}
+
+.menu a{
+  color: white;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.menu a:hover{
+  color: #e50914;
+}
+
+/* BANNER */
+
+.banner{
+  height: 100vh;
+
+  background-image: url('../imagens/strangerthings.png');
+  background-size: cover;
+  background-position: center;
+
+  position: relative;
+
+  display: flex;
+  align-items: center;
+
+  padding: 0 60px;
+}
+
+.overlay{
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.5);
+}
+
+.banner-content{
+  position: relative;
+  max-width: 600px;
+  z-index: 2;
+}
+
+.banner-content h1{
+  font-size: 4rem;
+  margin-bottom: 20px;
+}
+
+
+.banner-content p{
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 25px;
+}
+
+.banner-buttons{
+  display: flex;
+  gap: 15px;
+}
+
+.banner-buttons button{
+  padding: 12px 25px;
+  border: none;
+  border-radius: 5px;
+
+  font-size: 1rem;
+  font-weight: bold;
+
+  cursor: pointer;
+
+  transition: 0.3s;
+}
+
+.btn-play{
+  background: white;
+  color: black;
+}
+
+.btn-play:hover{
+  background: #ddd;
+}
+
+.btn-info{
+  background: rgba(109,109,110,0.7);
+  color: white;
+}
+
+.btn-info:hover{
+  background: rgba(109,109,110,1);
+}
+
+/* CATÁLOGO */
+
+.catalogo{
+  padding: 40px 60px;
+}
+
+.catalogo h2{
+  margin-bottom: 20px;
+}
+
+.cards{
+  display: flex;
+  gap: 15px;
+  overflow-x: auto;
+}
+
+.card{
+  min-width: 220px;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.card img{
+  width: 100%;
+  height: 200px;
+
+  object-fit: cover;
+
+  border-radius: 8px;
+
+  box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+}
+
+.card:hover{
+  transform: scale(1.08);
+}
+
+/* FOOTER */
+
+.footer{
+  padding: 30px;
+  text-align: center;
+  background: #000;
+  margin-top: 40px;
+}
+
+.social{
+  margin-top: 10px;
+}
+
+.social a{
+  color: #999;
+  margin: 0 10px;
+  text-decoration: none;
+}
+
+.social a:hover{
+  color: #fff;
+}
+
+/* RESPONSIVO */
+
+@media(max-width: 768px){
+
+  .header{
+    flex-direction: column;
+    gap: 15px;
+    padding: 20px;
+  }
+
+  .menu{
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .banner{
+    padding: 20px;
+    text-align: center;
+  }
+
+  .banner-content h1{
+    font-size: 2.5rem;
+  }
+
+  .banner-buttons{
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .catalogo{
+    padding: 30px 20px;
+  }
+
+  .card{
+    min-width: 160px;
+  }
+}
+
+/* SOBRE */
+
+.sobre{
+  min-height: 100vh;
+
+  padding: 120px 20px 60px;
+
+  background: #141414;
+
+  display: flex;
+  justify-content: center;
+}
+
+.sobre-container{
+  max-width: 1000px;
+  text-align: center;
+}
+
+.sobre h1{
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+.subtitulo{
+  color: #aaa;
+  margin-bottom: 40px;
+}
+
+/* GRID */
+.sobre-grid{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+/* CARD SOBRE */
+.sobre-card{
+  background: #1f1f1f;
+
+  padding: 25px;
+  border-radius: 10px;
+
+  text-align: left;
+
+  transition: 0.3s;
+}
+
+.sobre-card:hover{
+  transform: translateY(-5px);
+  background: #2a2a2a;
+}
+
+.sobre-card h2{
+  margin-bottom: 10px;
+  color: #e50914;
+}
+
+.sobre-card p{
+  color: #ccc;
+  line-height: 1.6;
+}
